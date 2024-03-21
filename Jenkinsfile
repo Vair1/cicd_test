@@ -10,7 +10,7 @@ pipeline {
     }
 
     agent {
-        label "${(env.jenkinsAgent == null || env.jenkinsAgent == 'null') ? "vbm_node" : env.jenkinsAgent}"
+        label "vbm_node"
     }
     options {
         timeout(time: 8, unit: 'HOURS') 

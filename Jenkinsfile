@@ -6,7 +6,7 @@ import io.libs.Utils
 pipeline {
 
     parameters {
-        string(defaultValue: "${env.jenkinsAgent}", description: 'Нода дженкинса, на которой запускать пайплайн. По умолчанию master', name: 'jenkinsAgent')
+        string(defaultValue: "${env.jenkinsAgent}", description: 'Нода дженкинса, на которой запускать пайплайн. По умолчанию vbm_node', name: 'jenkinsAgent')
         string(defaultValue: "${env.serveradress}", description: 'Адрес серверного кластера', name: 'serveradress')
         string(defaultValue: "${env.ibadress}", description: 'Наименование базы данных', name: 'ibadress')
         string(defaultValue: "${env.platform1c}", description: 'Версия платформы 1с, например 8.3.12.1685. По умолчанию будет использована последня версия среди установленных', name: 'platform1c')
@@ -15,7 +15,7 @@ pipeline {
     }
 
     agent {
-        label "${(env.jenkinsAgent == null || env.jenkinsAgent == 'null') ? "master" : env.jenkinsAgent}"
+        label "${(env.jenkinsAgent == null || env.jenkinsAgent == 'null') ? "vbm_node" : env.jenkinsAgent}"
     }
     options {
         timeout(time: 8, unit: 'HOURS') 

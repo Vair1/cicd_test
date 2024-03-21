@@ -22,18 +22,6 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr:'10'))
     }
     stages {
-        stage("Подготовка") {
-            steps {
-                timestamps {
-                    script {
-                        // создаем пустые каталоги
-                        dir ('build') {
-                            writeFile file:'dummy', text:''
-                        }
-                    }
-                }
-            }
-        }
         stage("Тестирование ADD") {
             steps {
                 timestamps {

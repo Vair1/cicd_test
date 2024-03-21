@@ -27,7 +27,7 @@ pipeline {
                 timestamps {
                     script {
                         
-                        returnCode = utils.cmd("runner vanessa --settings tools/vrunner.json --v8version ${platform1c} --ibconnection /S${serveradress}\${ibadress} --db-user ${admin1cUser} --db-pwd ${admin1cPwd}")
+                        returnCode = utils.cmd("runner vanessa --settings tools/vrunner.json --v8version ${platform1c} --ibconnection /Snfp-dev4:3541\VBM_BF_6 --db-user ${admin1cUser} --db-pwd ${admin1cPwd}")
 
                     }
                 }

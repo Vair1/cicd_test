@@ -34,7 +34,6 @@ pipeline {
                 }
             }
         }
-    stages {
         stage("Тестирование ADD") {
             steps {
                 timestamps {

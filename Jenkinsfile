@@ -52,7 +52,7 @@ pipeline {
                             admin1cPwdLine = "--db-pwd ${admin1cPwd}"
                         }
                         // Запускаем ADD тестирование на произвольной базе, сохранившейся в переменной testbaseConnString
-                        returnCode = utils.cmd("runner vanessa --settings tools/vrunner.json --v8version ${platform1cLine} --ibconnection /S${serveradress}\${ibadress} --db-user ${admin1cUsrLine} --db-pwd ${admin1cPwdLine} --pathvanessa tools/add/bddRunner.epf")
+                        returnCode = utils.cmd("runner vanessa --settings tools/vrunner.json --v8version ${platform1cLine} --ibconnection /S${serveradress}\${ibadress} --db-user "${admin1cUsrLine}" --db-pwd ${admin1cPwdLine} --pathvanessa tools/add/bddRunner.epf")
 
                         if (returnCode != 0) {
                             utils.raiseError("Возникла ошибка при запуске ADD на базе ${baseConnString}")

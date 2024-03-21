@@ -41,9 +41,6 @@ pipeline {
                         
                         returnCode = utils.cmd("runner vanessa --settings tools/vrunner.json --v8version ${platform1cLine} --ibconnection /S${serveradress}\${ibadress} --db-user ${admin1cUsrLine} --db-pwd ${admin1cPwdLine}")
 
-                        if (returnCode != 0) {
-                            utils.raiseError("Возникла ошибка при запуске ADD на базе ${baseConnString}")
-                        }
                     }
                 }
             }

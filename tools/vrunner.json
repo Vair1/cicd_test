@@ -9,7 +9,7 @@
     "vanessa": {
         "--vanessasettings": "tools/VBParams.json",
         "--workspace": ".",
-        "--pathvanessa": ".",
+        "--pathvanessa": "tools/add/bddRunner.epf",
         "--additional": "/DisplayAllFunctions /L ru"
     }
 }
